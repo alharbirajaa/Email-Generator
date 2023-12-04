@@ -1,0 +1,22 @@
+import java.util.*; //Start of Class EmailApp
+public class EmailApp
+{
+ public static void main(){
+ Scanner n = new Scanner(System.in);
+ Email[] emailList=new Email[5];
+
+ for(int i=0; i<emailList.length; i++){
+ System.out.println("Enter your details:");
+ System.out.print("First Name: ");
+ String First = n.next();
+ System.out.print("Last Name: ");
+ String Last = n.next();
+ emailList[i] = new Email(First, Last);
+ System.out.println();
+ }
+ System.out.print("-------------Students Details-------------------");
+ for(Email email : emailList){
+ System.out.println(email.toString());
+ }
+ }
+} 
